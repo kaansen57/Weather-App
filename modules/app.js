@@ -23,9 +23,7 @@ export const App = (function (WC, UIC) {
         const fiveDayWeatherData = getFiveDayData(searchCity);
 
         fiveDayWeatherData.then((res) => {
-          const arr = ["03:00:00", "06:00:00", "09:00:00"];
-          res.list.forEach((x,i) => {
-          })
+          UIC.dailyWeatherTemplate(res);
         });
 
         weatherData
@@ -49,6 +47,12 @@ export const App = (function (WC, UIC) {
         let searchValue = e.target.value;
         if (e.keyCode === 13 && searchValue && searchValue !== " ") {
           const weatherData = getData(searchCity);
+          const fiveDayWeatherData = getFiveDayData(searchCity);
+
+          fiveDayWeatherData.then((res) => {
+            UIC.dailyWeatherTemplate(res);
+          });
+
           weatherData.then((res) => {
             console.log(res);
             UIC.tempInformation(res);

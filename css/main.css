@@ -15,7 +15,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -40,10 +40,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem 0;
-  border-radius: 20px 20px 0 0;
   background: url("../img/sun.png") no-repeat center center;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .weather-container .search-wrapper {
@@ -101,12 +102,14 @@ body {
 
 .weather-container #temp-information #temp,
 .weather-container #temp-information #status,
-.weather-container #temp-information #status-detail {
-  -webkit-text-stroke: 1px #333;
+.weather-container #temp-information #status-detail,
+.weather-container #temp-information #city-name {
+  -webkit-text-stroke: .5px #333;
   padding: 0.5rem 2rem;
 }
 
 .weather-container #temp-information #city-name {
+  font-weight: bold;
   margin: 1rem 0;
 }
 
@@ -130,6 +133,9 @@ body {
   height: 210px;
   background-color: #fff;
   padding: 2rem 1rem;
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .weather-footer .weather-details-top {

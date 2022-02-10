@@ -12,16 +12,14 @@ export const WeatherController = (function () {
       return weatherData;
     },
     getFiveDayWeatherData: async function (city) {
-      const weatherData = await fetch(`${fiveDayWeatherApiUrl}ayancık`)
+      let daily = [];
+      const weatherData = await fetch(`${fiveDayWeatherApiUrl}${city}`)
         .then((res) => res.json())
         .then((res) => {
           const forecastList = res.list;
-          let daily = [];
-
           forecastList.forEach((item) => {
             const date = new Date(item.dt_txt);
             const hour = date.getHours();
-            // new Date(date).toLocaleDateString("tr-TR", { weekday: "long" })
 
             if (hour == 12) {
               const day = new Date(date).toLocaleDateString("en-EN", {
@@ -37,7 +35,7 @@ export const WeatherController = (function () {
             }
           });
         });
-      return weatherData;
+      return daily;
     },
   };
 })();
