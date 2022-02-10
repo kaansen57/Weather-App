@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="weather-container">
+                <div class="search-wrapper">
+                    <input type="text" class="search-input" id="search-input">
+                    <figure>
+                        <img class="submit-btn" id="submit" src="./img/search.png">
+                    </figure>
+                </div>
+                <article id="temp-information">
+                    <h1 id="city-name"></h1>
+                    <h1 id="temp"></h1>
+                    <h2 id="status">Please , enter a city !</h2>
+                    <h4 id="status-detail"></h4>
+                </article>
+            </div>
+            <div class="weather-footer">
+                <div class="weather-details-top">
+                    <h3 class="weather-details-day">Today</h3>
+                    <h4 class="weather-details-city">Ayancık, TR</h4>
+                </div>
+               <div class="weather-details-wrapper">
+                    <div class="weather-details-content">
+                        <h6 class="time">Now</h6>
+                        <img class="weather-icon" src="/img/clear-icon.png" alt="">
+                        <h6 class="temp">-</h6>
+                    </div>
+                    <div class="weather-details-content">
+                        <h6 class="time">Now</h6>
+                        <img class="weather-icon" src="/img/clear-icon.png" alt="">
+                        <h6 class="temp">-</h6>
+                    </div>
+                    <div class="weather-details-content">
+                        <h6 class="time">Now</h6>
+                        <img class="weather-icon" src="/img/clear-icon.png" alt="">
+                        <h6 class="temp">-</h6>
+                    </div>
+                    <div class="weather-details-content">
+                        <h6 class="time">Now</h6>
+                        <img class="weather-icon" src="/img/clear-icon.png" alt="">
+                        <h6 class="temp">-</h6>
+                    </div>
+                    <div class="weather-details-content">
+                        <h6 class="time">Now</h6>
+                        <img class="weather-icon" src="/img/clear-icon.png" alt="">
+                        <h6 class="temp">-</h6>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./modules/weather.js"></script>
+    <script type="module" src="./modules/ui.js"></script>
+    <script type="module" src="./modules/app.js"></script>
+</body>
+
+</html>
