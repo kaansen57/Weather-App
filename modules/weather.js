@@ -7,8 +7,6 @@ export const WeatherController = (function () {
       const weatherData = await fetch(`${currentWeatherApiUrl}${city}`).then(
         (res) => res.json()
       );
-
-      console.log(weatherData);
       return weatherData;
     },
     getFiveDayWeatherData: async function (city) {

@@ -54,7 +54,6 @@ export const App = (function (WC, UIC) {
           });
 
           weatherData.then((res) => {
-            console.log(res);
             UIC.tempInformation(res);
             UIC.backgroundChange(res.weather[0].main);
             UIC.elementShow(true);
@@ -68,7 +67,6 @@ export const App = (function (WC, UIC) {
 
   return {
     init: function () {
-      console.log("init");
       loadEventListener();
       UIC.elementShow(false);
     },
